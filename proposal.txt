@@ -1,0 +1,47 @@
+Kameron Bains
+Encrypy/Decrypt with key
+
+Description:
+This program will read in from a file a string and encrypt/decrypt depending on what the user wants. The user will be prompted to choose encrypt or decrypt and then enter a key. Then the program will shift each character in the string using a number derived from the key. The program will then display the new encrypted/decrypted string
+Functions:
+
+encrypt
+This function will encrypt a string
+Input
+R0 = string
+R1 = key
+Output
+R0 = encrypted string
+
+decrypt
+This function will decrypt a string
+Input
+R0 = string
+R1 = key
+Output
+R0 = decrypted string
+
+C library calls:
+
+printf - Display the output
+fopen - open file
+fgets - read line from file
+fclose - close file
+
+Error conditions:
+
+1. The input/output file doesn't open properly
+
+2. The input/output file doesn't close properly
+
+3. The key wasn't a number
+
+Sample Output:
+//
+Encrypted String:
+ajvgnaeso2507uu`fa `;]\-;fha
+//
+//
+Decrypted String:
+This string has been decrypted
+//
