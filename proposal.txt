@@ -2,24 +2,24 @@ Kameron Bains
 Encrypy/Decrypt with key
 
 Description:
-This program will read in from a file a string and encrypt/decrypt depending on what the user wants. The user will be prompted to choose encrypt or decrypt and then enter a key. Then the program will shift each character in the string using a number derived from the key. The program will then display the new encrypted/decrypted string
+This program will read in from a file a string and encrypt/decrypt depending on what the user wants. The user will be prompted to choose encrypt or decrypt and then enter a key. The program will use a xor cipher with the user given key to encrypt/decrypt the data. The program will then display the encrypted or decrypted string.
+
 Functions:
 
-encrypt
-This function will encrypt a string
+encrypt/decrypt
+This function will encrypt a string using a xor cipher. One function is used for encryption/decryption since we are doing the same formula.
 Input
 R0 = string
 R1 = key
 Output
-R0 = encrypted string
+R0 = encrypted/decrypted string
 
-decrypt
-This function will decrypt a string
+to_binary
+This function will convert ascii to binary.
 Input
-R0 = string
-R1 = key
+R0 = ascii number
 Output
-R0 = decrypted string
+R0 = binary number
 
 C library calls:
 
@@ -36,12 +36,17 @@ Error conditions:
 
 3. The key wasn't a number
 
+4. The choice to encrypt/decrypt wasn't 1 or 2.
 Sample Output:
 //
+Press 1 for Encrypt and 2 for Decrypt: 1
+Key: 2
 Encrypted String:
 ajvgnaeso2507uu`fa `;]\-;fha
 //
 //
+Press 1 for Encrypt and 2 for Decrypt: 2
+Enter your key: 2
 Decrypted String:
 This string has been decrypted
 //
