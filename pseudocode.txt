@@ -1,0 +1,59 @@
+Kameron Bains
+Xor Encryption/Decryption
+
+main.s
+Open and close files and dispaly encrypted/decrypted string
+
+@ Ask user to encrypt or decrypt file with 1 or 2
+@ If not 1 or 2 entered display error
+@ Ask user for a key
+@ If key is not a number display error
+@ Open the input.txt and output.txt file
+@ If file doesn't open display error
+@ Read from the input file one line at a time
+@ For each line in input.txt
+@	For each char in line
+@ 		encrypt_decrypt(char);
+@ Copy the char to line
+@		copy{char};
+@ Display the line of encryted/decypted characters
+@	printf(line);
+@ Copy the line to output.txt
+@ Close input.txt and output.txt file
+@ If files done close display error
+@ Exit the program
+
+
+to_binary.s
+Convert Ascii number to binary number
+Source: Tim McGowen
+
+Input:
+R0 = register loaded with Ascii digits string ending with a newline
+
+Output:
+R0 = binary number or -1 if not an ascii number
+
+@ Initialize Registers
+@ While character is not a newline
+@ 	If character is not digit then exit and R0 = -1
+@ 	Else convert ascii to binary digit
+@ 	Shift decimal sum over 1 digit
+@ 	Add binary to decimal sum
+@ 	Go to next character in string
+
+
+encrypt_decrypt.s
+Encrypt or Decrypt string using xor cipher
+Source: https://www.tutorialsprint.com/xor-cipher-in-cplusplus
+
+Input: 
+R0 = char
+R1 = key
+
+Output
+R0 = encrypted/decrypted char
+
+@ encrypted char = char ^ key
+@ output encrypted char
+
